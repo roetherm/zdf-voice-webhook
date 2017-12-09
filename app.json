@@ -1,0 +1,6 @@
+{
+  "name": "zdf-voice-app-webhook",
+  "description": "webhook",
+  "repository": "https://github.com/roetherm/zdf-voice-app-webhook.git",
+  "keywords": ["api.ai", "dialogflow", "natural language"]
+}

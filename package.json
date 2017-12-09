@@ -1,0 +1,14 @@
+{
+  "name": "zdf-voice-app-webhook",
+  "version": "1.0.0",
+  "description": "webhook",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Michael Roether",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4"
+  }
+}
