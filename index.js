@@ -48,8 +48,8 @@ app.post('/info', function(request, response) {
 
     // Return parameters to Dialogflow
     return response.json({
-        speech: forename + " " + lastname + ". Information: " + information + ". Team: " + teamname + ".",
-        displayText: forename + " " + lastname + ". Information: " + information + ". Team: " + teamname + ".",
+        speech: forename + " " + lastname + ". Bitteschön.",
+        displayText: forename + " " + lastname + ". Bitteschön.",
         source: 'zdf-voice-app-webhook'
     });
 
