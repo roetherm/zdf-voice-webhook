@@ -15,6 +15,8 @@ app.get('/', function(request, response) {
   console.log("Success");
 });
 
+
+/*
 var xhr = new XMLHttpRequest();
 var url = "https://zdf-voice-app.herokuapp.com/playerInfo/";
 xhr.open("POST", url, true);
@@ -25,8 +27,9 @@ xhr.onreadystatechange = function () {
     console.log(json.forename + ", " + json.lastname);
   }
 };
-var data = JSON.stringify({"forename:": "thomas", "lastname:" "müller"});
+var data = JSON.stringify({"forename": "thomas", "lastname": "müller"});
 xhr.send(data);
+*/
 
 app.post('/info', function(request, response) {
     var forename = request.body.result && request.body.result.parameters && request.body.result.parameters.playerforename ? request.body.result.parameters.playerforename : "Kein Vorname.";
