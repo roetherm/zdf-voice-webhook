@@ -2,6 +2,7 @@
 
 const express = require('express');
 const bodyParser = require('body-parser');
+const request = require('request');
 
 const app = express();
 
@@ -13,8 +14,28 @@ app.use(bodyParser.json());
 
 app.get('/', function(request, response) {
   console.log("Success");
+  response.send("Funktioniert!");
 });
 
+// Set the headers
+const headers = {
+    'Content-Type': 'application/json'
+};
+// Configure the request
+const options = {
+    url: 'https://zdf-voice-app.herokuapp.com/playerInfo',
+    method: 'POST',
+    headers: headers,
+    form: {'forename': 'thomas', 'lastname': 'müller'}
+};
+// Start the request
+request(options, function (error, response, body) {
+    if (!error && response.statusCode == 200) {
+        // Print out the response body
+        console.log(body)
+    }
+});
+console.log("Test");
 
 /*
 var xhr = new XMLHttpRequest();
